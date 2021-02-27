@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>登录 &mdash; 模块化商店</title>
+	<link rel="icon" href="image\icon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="image\icon.ico" type="image/x-icon"/>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/modules/izitoast/css/iziToast.min.css">
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="assets/modules/bootstrap-social/bootstrap-social.css">
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="body">
+  <div id="app">
+    <section class="section">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-12 col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+            <div class="card card-primary">
+              <div class="card-header"><h4>登录</h4></div>
+
+              <div class="card-body">
+                <form action="javascript:void(0);" class="needs-validation" novalidate="">
+                  <div class="form-group">
+                    <label for="username">用户名</label>
+                    <input id="username" class="form-control" name="username" tabindex="1" required autofocus>
+                    <div class="invalid-feedback">
+                      请输入您的用户名
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="d-block">
+                    	<label for="password" class="control-label">密码</label>
+                      <!-- <div class="float-right">
+                        <a href="auth-forgot-password.html" class="text-small">
+                          忘记密码?
+                        </a>
+                      </div> -->
+                    </div>
+                    <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
+                    <div class="invalid-feedback">
+                      请输入您的密码
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <button id='btn' onclick="login()" class="btn btn-primary btn-lg btn-block" tabindex="4">
+                      登录
+                    </button>
+                  </div>
+                </form>
+                <div class="text-center mt-4 mb-3">
+                  <div class="text-muted">
+                      还没有账号？ <a href="register.html">马上注册 👉</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div style="color: white" class="simple-footer">
+              Copyright &copy; 2020 模块化商店
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- General JS Scripts -->
+  <script src="assets/modules/jquery.min.js"></script>
+  <script src="assets/modules/popper.js"></script>
+  <script src="assets/modules/tooltip.js"></script>
+  <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+  <script src="assets/modules/moment.min.js"></script>
+  <script src="assets/js/stisla.js"></script>
+
+  <script src="assets/modules/izitoast/js/iziToast.min.js"></script>
+  
+  <!-- JS Libraies -->
+  <script src="js/sweetalert.min.js"></script>
+  <!-- Page Specific JS File -->
+
+  <!-- Template JS File -->
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+</body>
+
+<!--<script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>-->
+<!--<script>-->
+<!--    L2Dwidget.init({-->
+<!--        "model": {-->
+<!--            jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",-->
+<!--            "scale": 1-->
+<!--        },-->
+<!--        "display": {-->
+<!--            "position": "right",-->
+<!--            "width": 150,-->
+<!--            "height": 300,-->
+<!--            "hOffset": 0,-->
+<!--            "vOffset": -100-->
+<!--        },-->
+<!--        "mobile": {-->
+<!--            "show": false,-->
+<!--            "scale": 0.5-->
+<!--        },-->
+<!--        "react": {-->
+<!--            "opacityDefault": 0.7,-->
+<!--            "opacityOnHover": 0.2-->
+<!--        }-->
+<!--    });-->
+<!--</script>-->
+
+<script src="https://l2dwidget.js.org/lib/L2Dwidget.min.js"></script>
+<script type="text/javascript">
+    ee = 'dd';
+  L2Dwidget
+    .on('*', (name) => {
+      console.log('%c EVENT ' + '%c -> ' + name, 'background: #222; color: yellow', 'background: #fff; color: #000')
+    })
+    .init({
+        model: {
+            jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",
+            scale: 1
+        },
+        dialog: {
+            enable: true,
+            script: {
+            // 'every idle 10s': '$hitokoto$',
+            'every idle 60s': '终于等到你啦~'
+            }
+        },
+        display: {
+            position: "right",
+            hOffset: 0,
+            vOffset: -60
+        },
+        mobile: {
+            show: false,
+            scale: 0.5
+        },
+        react: {
+            opacity: 0.7
+        }
+    });
+</script>
+
+<script>
+    // iziToast.warning({
+    //   title: 'Tip：',
+    //   message: '在27号-29号后注册购买线路的部分会员数据出现了点问题，请联系客服QQ:993169459！',
+    //   position: 'topCenter',
+    //   timeout: 20000
+    // });
+    // iziToast.info({
+    //   title: 'Tip: ',
+    //   message: '目前移动线路有点卡顿，难连接，预计晚上恢复!给您带来的不便，深感抱歉！',
+    //   position: 'topCenter',
+    //   timeout: 20000
+    // });
+
+function login(){
+  $("#btn").addClass("btn-progress");
+  $.ajax({
+      type : "POST",
+      url : "php/login.php",
+      data: {
+            username: $("#username").val(),
+            password: $("#password").val()
+      },
+      success : function(result) {
+          $("#btn").removeClass("btn-progress");
+          window.location = 'user.php';
+      },
+      error : function(e){
+          $("#btn").removeClass("btn-progress");
+          var status = e.status;
+          if(status == 404){
+            swal("提示", "您输入的账号不存在", "error");
+          }else if (status == 406) {
+            swal("提示", "您输入的密码有误", "error");
+          }else{
+            swal("提示", "发生未知错误", "error");
+          }
+      }
+  });
+}
+</script>
+
+</html>
