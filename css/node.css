@@ -1,0 +1,26 @@
+body {
+  background-color: #f4f6f9;
+}
+.title {
+  font-size: 18px !important;
+  padding: 6px 20px !important;
+  border-radius: 0 0 5px 5px !important;
+}
+
+.node-status:before {
+  content: ' ';
+  border-radius: 5px;
+  height: 8px;
+  width: 8px;
+  display: inline-block;
+  margin-top: 6px;
+  margin-right: 8px;
+}
+
+.node-is-online:before {
+  background-color: #63ed7a;
+}
+
+.node-is-offline:before {
+  background-color: #fc544b;
+}

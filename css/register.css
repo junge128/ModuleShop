@@ -1,0 +1,10 @@
+.body {
+  background-image: url(../image/bg2.jpg);
+  background-size: cover;
+  background-position-x: 50%;
+}
+.invalid-feedback2 {
+  display: none;
+  width: 100%;
+  color: #dc3545;
+}

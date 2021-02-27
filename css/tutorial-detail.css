@@ -1,0 +1,80 @@
+body {
+  background-color: #f4f6f9;
+}
+.title {
+  font-size: 18px !important;
+  padding: 6px 20px !important;
+  border-radius: 0 0 5px 5px !important;
+}
+
+.steps {
+  margin: 10px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+.step-no {
+  font-size: 30px;
+  font-weight: 700;
+  color: #2E46AD;
+}
+
+.right-pic {
+  text-align: right;
+}
+.center-pic {
+  text-align: center;
+}
+.img {
+  max-width: 100%;
+}
+
+
+.tutorial-pic img {
+  border-radius: 5px;
+  width: 100%;
+  max-width: 24rem;
+}
+
+@media (max-width: 767px) {
+  .right-pic {
+    display: block;
+  }
+
+  .tutorial-pic img {
+    margin-top: 16px;
+    border-radius: 5px;
+    max-width: 100%;
+  }
+
+  .qrcode-btn {
+    display: none
+  }
+
+  .hide-on-mobie {
+    display: none;
+  }
+}
+
+.faq h6 {
+  color: #191d21;
+}
+
+.faq h6:before {
+  content: ' ';
+  border-radius: 5px;
+  height: 6px;
+  width: 6px;
+  background-color: #2E46AD;
+  display: inline-block;
+  float: left;
+  margin-top: 6px;
+  margin-right: 8px;
+}
+
+.faq p {
+  font-weight: normal !important;
+}

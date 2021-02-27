@@ -1,0 +1,21 @@
+body {
+  background-color: #f4f6f9;
+}
+.title {
+  font-size: 18px !important;
+  padding: 6px 20px !important;
+  border-radius: 0 0 5px 5px !important;
+}
+.hot {
+  font-size: 30px !important;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+  color: pink;
+}
+.shop_loading {
+  padding: 80px;
+  height: 260px;
+  text-align: center;
+}
